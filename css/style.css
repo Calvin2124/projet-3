@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root{
+    --pink : #FBEBEB;
+    --grey : #7A7A7A;
+    --prata : "Prata", serif;
+    --roboto : "Roboto", sans-serif;
+    --openSans : "Open Sans", sans-serif;
+    --black : #000;
+    --white : #FFF;
+    --pinkElement : #EC4899;
+    --border : #69727D;
+}
+
+*{
+    margin: 0;
+}
+
+.burger{
+    display: none !important;
+}
+
+.container1440{
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.container1140{
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+    font-family: var(--roboto);
+}
+
+.btnBlack{
+    color: var(--white);
+    background-color: var(--black);
+    border-radius: 3px;
+    padding: 8px 24px;
+    border: none;
+}
+
+h1, h2{
+    font-size: 35px;
+    line-height: 35px;
+    color: var(--black);
+    font-family: var(--prata);
+    font-weight: 400;
+}
+
+h3{
+    font-size: 22px;
+    line-height: 22px;
+    font-family: var(--prata);
+    font-weight: 400;
+}
+
+p{
+    font-family: var(--openSans);
+}
+
+.p18{
+    font-size: 18px;
+}
+
+.p15{
+    font-size: 15px;
+}
+
+#formContact input, #formContact textarea{
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    outline:  none;
+    resize: none;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 16px;
+}
+
+#formContact input, #formContact textarea{
+    padding: 11px 17px;
+}
+
+#formContact input::placeholder, #formContact textarea::placeholder{
+    font-family: var(--roboto);
+    font-size: 15px;
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--pink);
+    padding: 20px;
+}
+
+header > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header > div img{
+    max-height: 220px;
+    width: 100%;
+}
+
+header nav ul{
+    gap: 20px;
+}
+
+header nav ul a, footer > div ul a{
+    color: var(--grey);
+    transition: all 0.2s ease;
+}
+
+header nav ul a:hover, footer > div ul a:hover{
+    transition: all 0.2s ease;
+    color: var(--pinkElement);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--pink);
+    padding: 30px;
+}
+
+footer > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer > div ul {
+    gap: 20px;
+}
+
+/* ELEVATE */
+
+#elevate{
+    background-color: var(--pink);
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+#elevate > div{
+    display: flex;
+    gap: 70px;
+    height: 650px;
+}
+
+#elevate h1{
+    margin-bottom: 20px;
+}
+
+#elevate article:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 720px;
+}
+
+#elevate > div > article:nth-child(1) > p{
+    margin-bottom: 30px;
+}
+
+#elevate .p15{
+    margin-right: auto;
+}
+
+#elevate img{
+    max-height: 500px;
+}
+
+#elevate article:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 5%);
+    gap: 20px;
+}
+
+#elevate article:nth-child(2) img:nth-child(1){
+    grid-row: 2/7;
+    grid-column: 1;
+}
+
+#elevate article:nth-child(2) img:nth-child(2){
+    grid-column: 2;
+}
+
+/* SERVICES */
+
+#services{
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+#services h2{
+    margin-bottom: 30px;
+}
+
+#services .p18{
+    line-height: 27px;
+    margin-bottom: 10px;
+}
+
+#services .container1440{
+    text-align: center;
+}
+
+.servicesArticle{
+    display: flex;
+    gap: 30px;
+}
+
+.servicesIcon{
+    color: var(--pinkElement);
+    font-size: 50px;
+}
+
+.servicesArticle article{
+    display: grid;
+    gap: 20px;
+}
+
+/* PORTFOLIO */
+
+#portfolio{
+    background-color: var(--pink);
+    padding-top: 70px;
+    margin-bottom: 50px;
+}
+
+#portfolio h2, #portfolio > div > p{
+    text-align: center;
+}
+
+#portfolio h2{
+    margin-bottom: 30px;
+}
+
+#portfolio > div > p{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.portfolioArticle{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.portfolioArticle img{
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 20px;
+}
+
+.portfolioArticle article{
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 0px #00000033;
+    background-color: var(--white);
+}
+
+.portfolioArticle article h3, .portfolioArticle article p{
+    padding-left: 10px;
+    padding-right: 30px;
+    margin-bottom: 15px;
+}
+
+/* CONTACT */
+#contact img{
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#contact h2, #contact > div > p{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#contact h2{
+    font-size: 52px;
+}
+
+.contactImg{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+#formContact{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 745px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#formContact button{
+    margin: auto;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px ) {
+    header ul, footer ul, header a.p15{
+        display: none;
+    }
+    .burger{
+        display: block !important;
+        cursor: pointer;
+    }
+
+    #elevate > div{
+        display: block;
+        height: fit-content;
+    }
+    #elevate article:nth-child(1){
+        margin: auto;
+    }
+    #elevate article:nth-child(2) img:nth-child(2), #elevate article:nth-child(2) img:nth-child(1){
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #elevate article:nth-child(2){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    #elevate article:nth-child(2) img:nth-child(1), #elevate article:nth-child(2) img:nth-child(2){
+        grid-column: 1;
+    }
+    .portfolioArticle{
+        flex-wrap: wrap;
+    }
+    .contactImg, .servicesArticle{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    #elevate article:nth-child(2) img:nth-child(1), #elevate article:nth-child(2) img:nth-child(2){
+        width: 100%;
+    }
+    header > div{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
